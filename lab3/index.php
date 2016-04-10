@@ -1,3 +1,4 @@
+<?php require_once("start.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,11 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 </head>
-<script>
-    $(document).ready(function() {
-        
-    });
-</script>
 <body>
     <form class="contact_form" action="add.php" method="post" name="contact_form">
         <ul>
@@ -44,7 +40,6 @@
                 <button class="submit" type="submit">Отправить</button>
             </li>
         </ul>
-        <input id="key" type="hidden" name="" value="333"></input>
     </form>
 </form>
 </body>
