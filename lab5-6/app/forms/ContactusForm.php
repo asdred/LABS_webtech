@@ -25,12 +25,6 @@ class ContactusForm extends Form
             'required'    => true
         ));
         $name->setLabel("Имя:");
-        $name->setFilters(array('striptags', 'string'));
-        $name->addValidators(array(
-            new PresenceOf(array(
-                'message' => 'Имя обязательно'
-            ))
-        ));
         $this->add($name);
         
         // Поле фамилия
@@ -40,12 +34,6 @@ class ContactusForm extends Form
             'required'    => true
         ));
         $sname->setLabel("Фамилия:");
-        $sname->setFilters(array('striptags', 'string'));
-        $sname->addValidators(array(
-            new PresenceOf(array(
-                'message' => 'Фамилия обязательна'
-            ))
-        ));
         $this->add($sname);
         
         // Поле email
@@ -55,12 +43,6 @@ class ContactusForm extends Form
             'required'    => true,
         ));
         $email->setLabel("E-mail:");
-        $email->setFilters(array('striptags', 'string'));
-        $email->addValidators(array(
-            new PresenceOf(array(
-                'message' => 'E-mail обязателен'
-            ))
-        ));
         $this->add($email);
         
         // Поле website
@@ -70,7 +52,6 @@ class ContactusForm extends Form
             'pattern'     => '(http|https)://.+'
         ));
         $url->setLabel("Сайт:");
-        $url->setFilters(array('striptags', 'string'));
         $this->add($url);
         
         // Поле сообщение
@@ -82,12 +63,6 @@ class ContactusForm extends Form
             'rows'        => 6
         ));
         $message->setLabel("Сообщение:");
-        $message->setFilters(array('striptags', 'string'));
-        $message->addValidators(array(
-            new PresenceOf(array(
-                'message' => 'Сообщение обязательно'
-            ))
-        ));
         $this->add($message);
     }
 }
